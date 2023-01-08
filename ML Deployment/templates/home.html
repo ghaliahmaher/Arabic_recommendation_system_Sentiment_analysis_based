@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <title>فيلم مشاعري</title>
+</head>
+<style>body {background-image: url({{url_for('static',filename='posters1.jpg')}})}</style>
+<body>
+  <center>
+    <h1 style="color:white;">فلمك حسب مشاعرك</h1>
+    <p style="color:white;">اكتب جملة تصف شعورك الحالي</p>
+    <form action="{{url_for('Recommendation')}}" method="post">
+        <!-- Input From The User -->
+        <ul>
+      <p>
+        <!-- This is the title for the input-->
+        <label style="color:white;" for="result">:الجملة</label>
+          <!-- placeholder is the hint text-->
+            <input type="text" name="result" placeholder="مثلا: انا سعيدة اليوم" required="required" />
+        <br>
+        <!-- submit button -->
+        <button id="submit" type="submit">فلمي</button>
+      </p>
+        </ul>
+    </form>
+  </center>
+</body>
+</html>

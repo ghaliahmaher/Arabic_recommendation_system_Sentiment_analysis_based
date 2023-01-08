@@ -1,0 +1,4 @@
+The link of the dataset: 
+
+STC IP TV Dataset:
+https://lab.stc.com.sa/dataset/assets/files/stc-IPTV-data-set.zip

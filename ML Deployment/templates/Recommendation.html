@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>الاقتراحات</title>
+</head>
+
+<head>
+<style>
+table { border-collapse: collapse;
+  width: 100%; }
+td { background-color: #FFFFFF;
+    text-align: left; }
+th {background-color: #FFFFFF;
+   text-align: right; }
+
+</style>
+</head>
+
+<style>body {background-image: url({{url_for('static',filename='posters1.jpg')}})}</style>
+<body>
+    <center>
+    <h1 style="color:white;">الفلم المقترح</h1>
+    <p style="color:white;">:شعورك كان
+    <br style="color:white;">{{ee}}</p>
+    <p style="color:white;">!استمتع
+    <br style="color:white;"> {{recommendations_texts}}</p>
+    <table>
+      <h1>
+      {% for table in df %}
+      <h2>{{titles[loop.index]}}</h2>
+      {{ table|safe }}
+      {% endfor %}
+    </h1>
+    </table>
+    <br>
+    <a style="color:white;" class="link-primary" role="button" href="/">أعد كتابة شعورك</a>
+    <br>
+  </center>
+</body>
+</html>
